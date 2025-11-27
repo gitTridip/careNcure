@@ -11,7 +11,7 @@ export const appointmentFormValidation = Yup.object().shape({
         .required('Age is required'),
     address: Yup.string().required('Address is required'),
     contact_number: Yup.string()
-        .matches(/^[0-9]{12}$/, 'Contact number must be 10 digits')
+        .matches(/^[0-9]{10}$/, 'Contact number must be 10 digits')
         .required('Contact number is required'),
     date: Yup.date().required('Date is required'),
     medical_speciality: Yup.string().required('Speciality is required'),

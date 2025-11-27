@@ -2,6 +2,7 @@
   width: 100%;
   padding: 0;
   margin: 0;
+  /* overflow-x: hidden; */
 }
 
 /* admin header design start */
@@ -64,7 +65,7 @@
   align-items: center;
   gap: 35rem;
   /* border: 1px solid yellow; */
-  width: 99.8%;
+  width: inherit;
   height: 70px;
   box-shadow: 0px 0px 10px 2px rgba(26, 65, 138, 0.473);
 }
@@ -84,6 +85,11 @@
   align-items: center;
   gap: 50px;
   cursor: pointer;
+  width: auto;
+}
+
+.navbar-items a {
+  width: auto;
 }
 
 .navbar-items span {
@@ -117,41 +123,46 @@
   align-items: center;
   justify-content: space-around;
   background-color: rgb(18, 26, 136);
-  min-height: 200px;
+  min-height: 130px;
   width: 100%;
 }
 
 .footer-logo {
   height: 90px;
   width: 200px;
+  padding-left: 15px;
+  text-align: end;
 }
 
 .footer-container-section {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: center;
   /* width: 100%; */
   gap: 30px;
+  padding-right: 15px;
 }
 
 .footer-section-icons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 25px;
+  /* display: flex;
+  align-items: flex-end;
+  justify-content: center; */
+  text-align: end;
 }
 
 .footer-icons {
   color: white;
-  height: 22px;
-  width: 22px;
+  height: 25px;
+  width: 28px;
+  margin-right: 15px;
 }
 
 .footer-container-section span {
   color: white;
   font-size: 1.1rem;
   font-weight: 500;
+  text-align: end;
 }
 
 /* home section */
@@ -163,10 +174,15 @@
   margin-top: 20px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   margin-bottom: 1px;
   background: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255), rgba(161, 184, 228, 0.308));
   /* width: 100%; */
+}
+
+.home-section1 img {
+  height: 550px;
+  width: 450px;
 }
 
 .home-section1-section {
@@ -174,6 +190,8 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  /* text-align: center; */
+  width: auto;
 }
 
 .home-section1-section p {
@@ -186,6 +204,10 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
+}
+
+.home-btn-section .btn-link {
+  width: 170px;
 }
 
 .home-section2 {
@@ -208,6 +230,7 @@
 .home-section2-section label {
   font-size: 1.2rem;
   font-weight: 600;
+  text-align: center;
 }
 
 .section-icons {
@@ -259,6 +282,7 @@
   margin-top: 10px;
   margin-bottom: 20px;
   color: rgb(18, 26, 136);
+  text-align: center;
 }
 
 .appointment-form {
@@ -293,14 +317,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15rem;
-  width: inherit;
+  gap: 1rem;
+  /* width: inherit; */
   height: 11rem;
   background: linear-gradient(rgba(142, 171, 226, 0.589), rgba(153, 178, 226, 0.425), rgb(253, 253, 253));
 }
 
 .doctors-header-section h1 {
   color: rgb(18, 26, 136);
+  width: 250px;
 }
 
 .doctors-search-container {
@@ -334,10 +359,26 @@
   align-items: center;
   justify-content: space-evenly;
   text-align: center;
-  width: 100%;
   margin-bottom: 30px;
-  gap: 20px;
   margin-top: 1rem;
+  /* border: 1px solid red; */
+}
+
+.doctors-card {
+  height: 380px !important;
+  width: 180px;
+  margin-top: 20px;
+  border: none !important;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.445);
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+}
+
+.doctors-card-img {
+  padding: 10px;
+  background: linear-gradient(rgba(142, 171, 226, 0.589), rgba(153, 178, 226, 0.425), rgb(253, 253, 253));
 }
 
 /* modal design */
@@ -432,18 +473,18 @@
 
 /* Mobile (<=768px) */
 @media screen and (max-width: 768px) {
-  body {
-    width: 100%;
-  }
 
   .navbar-container,
   .admin-navbar-container {
     /* flex-direction: column; */
-
     display: flex;
     justify-content: space-between;
     height: auto;
-    padding: 1rem;
+    /* padding: 1rem; */
+  }
+
+  .logo {
+    margin-left: 0;
   }
 
   .navbar-items {
@@ -457,6 +498,20 @@
     width: 80%;
   }
 
+  .home-section1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 15px;
+  }
+
+  .home-section1 img {
+    height: 250px;
+    width: 230px;
+  }
+
   .appointment-form {
     width: 80%;
   }
@@ -466,8 +521,39 @@
   }
 
   .footer-container {
-    flex-direction: column;
+    display: flex;
     text-align: center;
+  }
+
+  .footer-logo {
+    height: auto;
+    width: 150px;
+  }
+
+  .footer-container-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    /* width: 100%; */
+    gap: 10px;
+    padding-right: 15px;
+  }
+
+  .doctors-container {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .doctors-list-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    gap: 8px;
   }
 }
 
@@ -501,6 +587,10 @@
   }
 }
 
+body {
+  box-sizing: border-box;
+}
+
 /* --- Hamburger --- */
 .hamburger {
   display: none;
@@ -509,6 +599,8 @@
   width: 26px;
   height: 20px;
   cursor: pointer;
+  z-index: 9999;
+  overflow-y: auto;
 }
 
 .hamburger span {
@@ -539,17 +631,16 @@
   }
 
   .navbar-items {
-    position: absolute;
+    position: fixed;
     top: 70px;
-    right: 0;
+    left: 0;
     width: 100%;
-    /* flex-direction: column; */
-    align-items: center;
     background: white;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
     height: 0;
     overflow: hidden;
     transition: height 0.3s ease;
+    z-index: 9999;
   }
 
   .navbar-items.active {

@@ -32,15 +32,11 @@ const Doctors = () => {
             {/* doctor list */}
             <Container className='doctors-list-section'>
                 {/* row-1 */}
-                <Row>
+                <Row className='docotors-list-row'>
                     {/* doc-1 */}
-                    <Col sm>
-                        <Card style={{
-                            width: 'auto',
-                            display: "flex",
-                            alignItems: "center", justifyContent: "center", border: "none"
-                        }}>
-                            <Card.Img variant="top" src={doctor1} className='card-img' />
+                    <Col className='docotors-list-col'>
+                        <Card className='doctors-card'>
+                            <Card.Img variant="top" src={doctor1} className='doctors-card-img' />
                             <Card.Body>
                                 <Card.Title>Dr. Smriti Gupta</Card.Title>
                                 <Card.Text>Heart Specialist</Card.Text>
@@ -49,13 +45,9 @@ const Doctors = () => {
                         </Card>
                     </Col>
                     {/* doc-2 */}
-                    <Col sm>
-                        <Card style={{
-                            width: 'auto',
-                            display: "flex",
-                            alignItems: "center", justifyContent: "center", border: "none"
-                        }}>
-                            <Card.Img variant="top" src={doctor1} className='card-img' />
+                    <Col className='docotors-list-col'>
+                        <Card className='doctors-card'>
+                            <Card.Img variant="top" src={doctor1} className='doctors-card-img' />
                             <Card.Body>
                                 <Card.Title>Dr. Smriti Gupta</Card.Title>
                                 <Card.Text>Heart Specialist</Card.Text>
@@ -64,13 +56,9 @@ const Doctors = () => {
                         </Card>
                     </Col>
                     {/* doc-3 */}
-                    <Col sm>
-                        <Card style={{
-                            width: 'auto',
-                            display: "flex",
-                            alignItems: "center", justifyContent: "center", border: "none"
-                        }}>
-                            <Card.Img variant="top" src={doctor2} className='card-img' />
+                    <Col className='docotors-list-col'>
+                        <Card className='doctors-card'>
+                            <Card.Img variant="top" src={doctor2} className='doctors-card-img' />
                             <Card.Body>
                                 <Card.Title>Dr. Smriti Gupta</Card.Title>
                                 <Card.Text>Heart Specialist</Card.Text>
@@ -79,13 +67,9 @@ const Doctors = () => {
                         </Card>
                     </Col>
                     {/* doc-4 */}
-                    <Col sm>
-                        <Card style={{
-                            width: 'auto',
-                            display: "flex",
-                            alignItems: "center", justifyContent: "center", border: "none"
-                        }}>
-                            <Card.Img variant="top" src={doctor1} className='card-img' />
+                    <Col className='docotors-list-col'>
+                        <Card className='doctors-card'>
+                            <Card.Img variant="top" src={doctor1} className='doctors-card-img' />
                             <Card.Body>
                                 <Card.Title>Dr. Smriti Gupta</Card.Title>
                                 <Card.Text>Heart Specialist</Card.Text>
@@ -97,13 +81,9 @@ const Doctors = () => {
                 {/* row-2 */}
                 <Row>
                     {/* doc-5 */}
-                    <Col sm>
-                        <Card style={{
-                            width: 'auto',
-                            display: "flex",
-                            alignItems: "center", justifyContent: "center", border: "none"
-                        }}>
-                            <Card.Img variant="top" src={doctor3} className='card-img' />
+                    <Col className='docotors-list-col'>
+                        <Card className='doctors-card'>
+                            <Card.Img variant="top" src={doctor3} className='doctors-card-img' />
                             <Card.Body>
                                 <Card.Title>Dr. Smriti Gupta</Card.Title>
                                 <Card.Text>Heart Specialist</Card.Text>
@@ -112,13 +92,9 @@ const Doctors = () => {
                         </Card>
                     </Col>
                     {/* doc-6 */}
-                    <Col sm>
-                        <Card style={{
-                            width: 'auto',
-                            display: "flex",
-                            alignItems: "center", justifyContent: "center", border: "none"
-                        }}>
-                            <Card.Img variant="top" src={doctor1} className='card-img' />
+                    <Col className='docotors-list-col'>
+                        <Card className='doctors-card'>
+                            <Card.Img variant="top" src={doctor1} className='doctors-card-img' />
                             <Card.Body>
                                 <Card.Title>Dr. Smriti Gupta</Card.Title>
                                 <Card.Text>Heart Specialist</Card.Text>
@@ -127,13 +103,9 @@ const Doctors = () => {
                         </Card>
                     </Col>
                     {/* doc-7 */}
-                    <Col sm>
-                        <Card style={{
-                            width: 'auto',
-                            display: "flex",
-                            alignItems: "center", justifyContent: "center", border: "none"
-                        }}>
-                            <Card.Img variant="top" src={doctor4} className='card-img' />
+                    <Col className='docotors-list-col'>
+                        <Card className='doctors-card'>
+                            <Card.Img variant="top" src={doctor4} className='doctors-card-img' />
                             <Card.Body>
                                 <Card.Title>Dr. Smriti Gupta</Card.Title>
                                 <Card.Text>Heart Specialist</Card.Text>
@@ -142,13 +114,9 @@ const Doctors = () => {
                         </Card>
                     </Col>
                     {/* doc-8 */}
-                    <Col sm>
-                        <Card style={{
-                            width: 'auto',
-                            display: "flex",
-                            alignItems: "center", justifyContent: "center", border: "none"
-                        }}>
-                            <Card.Img variant="top" src={doctor2} className='card-img' />
+                    <Col className='docotors-list-col'>
+                        <Card className='doctors-card'>
+                            <Card.Img variant="top" src={doctor2} className='doctors-card-img' />
                             <Card.Body>
                                 <Card.Title>Dr. Smriti Gupta</Card.Title>
                                 <Card.Text>Heart Specialist</Card.Text>

@@ -4,7 +4,7 @@ const WorkInProgress = () => {
     return (
         <div style={{
             textAlign: 'center',
-            fontSize: '2rem',
+            fontSize: '1rem',
             fontWeight:'600',
             color: '#888',
         }}>

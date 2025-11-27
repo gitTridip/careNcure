@@ -1,19 +1,24 @@
-import React, { useState } from 'react'
 import axios from 'axios';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css';
 import { toast, ToastContainer } from 'react-toastify';
 import { appointmentFormValidation } from '../validation/FormValidation';
+import { baseURL } from '../assets/API/API.js';
 
 const Appointment = () => {
-    const [phone, setPhone] = useState('');
+    // const [phone, setPhone] = useState('');
     const handleAppointmentSubmit = (values, { resetForm }) => {
-        values.contact_number = phone;
-        axios.post("http://localhost:8081/api/patient/registration", values)
+        const token = localStorage.getItem("token");
+        // values.contact_number = phone;
+        axios.post(`${baseURL}/appoinment/book`, values, {
+            headers: {
+                Authorization:`Bearer ${token}`,
+                "Content-Type": "application/json",
+            }
+        })
             .then((res) => {
                 console.log("Form Submitted:", res.data);
                 toast.success("Booked!");
@@ -80,20 +85,7 @@ const Appointment = () => {
                         <Row className="mb-3">
                             <Col>
                                 <label><strong>Contact Number</strong></label>
-                                <PhoneInput
-                                    country={'in'}
-                                    onlyCountries={['in']}
-                                    value={phone}
-                                    onChange={(value) => {
-                                        setPhone(value);
-                                        setFieldValue("contact_number", value); // <-- updates Formik
-                                    }}
-                                    inputProps={{
-                                        required: true,
-                                        className: 'form-control'
-                                    }}
-                                    containerClass='react-tel-input w-100'
-                                />
+                                <Field type="text" name="contact_number" className="form-control" placeholder="+91----------" maxLength={10} />
                                 <ErrorMessage name="contact_number" component="div" className="text-danger" />
                             </Col>
 
