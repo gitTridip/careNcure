@@ -17,13 +17,13 @@ COPY src src
 RUN ./mvnw clean package -DskipTests
 
 # Step 2: Run stage (smaller image)
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17-jre-jammy
 WORKDIR /app
 
 # Copy only the final jar from the builder stage
 COPY --from=builder /app/target/backend-0.0.1-SNAPSHOT.jar app.jar
 
-# Expose port (optional)
+# Expose port (optional, but must match your app's port)
 EXPOSE 8081
 
 # Run the jar
